@@ -10,18 +10,37 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>LOGIN</title>
+        <style>
+            table{
+                background-color: highlight;
+                width:100%;
+                
+            }
+            td{
+                font-family: sans-serif;
+                font-size: 100%;
+                text-align: center;
+                padding: 10px;
+            }
+            
+            
+        </style>
+              
+
+        </hr>
     </head>
     <body>
+        <table>
         <form action="login.jsp" methord="post">
-            Usuario:<br/><input type="text" name="Usuario" /><br/>
-            <input type="submit" value="logar" />
+            <tr><td>Nome</td><br/><td><input type="text" name="Usuario" /><br/></td>
+        <td><input type="submit" value="Logar" /></td></tr>
         </form>
-        
+         </table>
         <%
             String usuario = request.getParameter("Usuario");
             if(usuario!=null && !usuario.isEmpty()){
                 session.setAttribute("Usuario", usuario);
-                response.sendRedirect("index.jsp");
+                response.sendRedirect("Perfil.jsp");
             }
             
         %>

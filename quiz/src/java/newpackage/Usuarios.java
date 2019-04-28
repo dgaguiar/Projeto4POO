@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Usuarios {
     private String usuario;
-    private String notas;
+    private Double notas;
 
     public String getUsuario() {
         return usuario;
@@ -23,11 +23,11 @@ public class Usuarios {
         this.usuario = usuario;
     }
 
-    public String getNotas() {
+    public double getNotas() {
         return notas;
     }
 
-    public void setNotas(String notas) {
+    public void setNotas(double notas) {
         this.notas = notas;
     }
     private static ArrayList<Usuarios>usuarios;

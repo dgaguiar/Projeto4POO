@@ -9,7 +9,7 @@ package newpackage;
  *
  * @author thiag
  */
-public class Qestion {
+public class Question {
     private String questoes;
     private String respostas;
     private String alternativas[];
@@ -37,7 +37,7 @@ public class Qestion {
     public void setAlternativas(String[] alternativas) {
         this.alternativas = alternativas;
     }
-    public Qestion(String questoes, String respostas, String[] alternativas) {
+    public Question(String questoes, String respostas, String[] alternativas) {
         this.questoes = questoes;
         this.respostas = respostas;
         this.alternativas = alternativas;

@@ -37,30 +37,29 @@ public class BD {
     
     //Cadastra as notas e armazena vinculando com o nome do usuario
     public static void cadastraNotas(String nome, Double nota){
-        
+        //se o nome do usuário for igual adicionar a nota a lista de notas do usuário
          if(notas.containsKey(nome)){
             notas.get(nome).add(nota);
             
             notas.get(nome).forEach( s -> System.out.println("Nome: " + nome + "Notas: " + s));
             
             
-        }else{
+        }else{ //se não criar uma lista de notas para o usuário
             List<Double> notas1 = new ArrayList<>(); 
             notas1.add(nota);
             notas.put(nome, notas1);
-        }
-        
-         
+        }       
        
     }
     
+    //captura as notas cadastradas em determinado usuário
      public static List<Double> getNotas(String nome){
          
-        return notas.get(nome);
-        
+        return notas.get(nome);        
     }
      
-    private static ArrayList<Usuarios> Usuarios;
+     
+    /* private static ArrayList<Usuarios> Usuarios;
     private static ArrayList<Question> TestesFeitos;
     private static ArrayList<Usuarios> getPessoa() {
         if (Usuarios == null) {
@@ -90,10 +89,10 @@ public class BD {
         for(Usuarios u: getPessoa()){
             if(u.getUsuario().equals(nomeUsuario)){
                 double mediaNota = 0;
-                if(u.getNotas()== 0){
+                if(u.getNotas(i)== 0){
                     mediaNota = acertosQuiz;
                 }else{
-                    mediaNota = (u.getNotas() + acertosQuiz)/2;
+                    mediaNota = (u.getNotas(i) + acertosQuiz)/2;
                 }
                 u.setNotas(mediaNota);
                 BD.getPessoa().remove(i);
@@ -128,5 +127,5 @@ public class BD {
     public static int totalTestesFeitos(){
         return BD.getTestesFeitos().size();
     }
-    
+    */
 }

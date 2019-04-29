@@ -6,6 +6,7 @@
 package newpackage;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  */
 public class Usuarios {
     private String usuario;
-    private Double notas;
+    private List<Double> notas;
 
     public String getUsuario() {
         return usuario;
@@ -23,13 +24,15 @@ public class Usuarios {
         this.usuario = usuario;
     }
 
-    public double getNotas() {
+    public List<Double> getNotas() {
         return notas;
     }
 
-    public void setNotas(double notas) {
+    public void setNotas(List<Double> notas) {
         this.notas = notas;
     }
+
+    
     private static ArrayList<Usuarios>usuarios;
     public static ArrayList<Usuarios>getUsuarios(){
     usuarios = new ArrayList();

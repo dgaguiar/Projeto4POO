@@ -40,7 +40,7 @@
             String usuario = request.getParameter("Usuario");
             if(usuario!=null && !usuario.isEmpty()){
                 session.setAttribute("Usuario", usuario);
-                response.sendRedirect("Perfil.jsp");
+                response.sendRedirect("perfil.jsp");
             }
             
         %>

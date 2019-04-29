@@ -46,7 +46,7 @@
     </head>
     <body>
          <a href="home.jsp">Home</a>   
-         <a href="Perfil.jsp"> Perfil</a></li>
+         <a href="perfil.jsp"> Perfil</a></li>
        
         <%if(request.getParameter("TESTE")==null){%>
         <h1>BEM VINDO, <%=usuario%>.</h1>

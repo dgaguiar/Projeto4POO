@@ -10,9 +10,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>LOGIN</title>
-        <style>
+        <style type="text/css">
             table{
-                background-color: highlight;
+                
                 width:100%;
                 
             }
@@ -22,8 +22,7 @@
                 text-align: center;
                 padding: 10px;
             }
-            
-            
+                     
         </style>
               
 

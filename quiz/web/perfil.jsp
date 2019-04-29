@@ -24,6 +24,10 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Perfil</title>
         <style type="text/css">
+            body{
+               
+                background-color:#EEEEE0;
+            }
             td{
                 padding: 0;
             }
@@ -31,17 +35,31 @@
                 border-collapse: collapse;
                 width:100%; 
                 text-align: center;
+                background-color: white; 
+            }
+            h1#bemvindo{
+                font-family: sans-serif;
+                font-size: 30pt;
+                text-align: center;
             }
             
+            table#notas{
+                width:50%;
+                margin: 0 auto;
+                border-collapse: collapse;
+            }
             
         </style>
     </head>
     <body>
-         <h1>BEM VINDO, <%=usuario%>.</h1>
-         <h3><a href="teste.jsp"> FAÇA SEU TESTE </a></h3>
+         <h1 id="bemvindo">BEM VINDO, <%=usuario%>.</h1>
+         <hr/>
+         
+         <h4 style="text-align: center; font-family: sans-serif;"><a href="teste.jsp">  IR PARA TESTE </a></h4>
              <br/>
              <% if (BD.getNotas(usuario)!=null){ %>
-              <table border =1>
+             <h2 style="text-align: center; font-family: sans-serif;">Suas notas</h2>
+              <table id="notas"border =1>
                  <tr><td>Teste</td><td>Nota</td></tr>
              <% for(int i = 0; i < notas.size(); i++) {%>
              <tr><td><h3> <%=i+1%> ° </h3></td>
@@ -50,10 +68,10 @@
                   <% } %>
              </table> 
              <% } else { %>
-             <h3>Usuário não realizou testes anteriores</h3>
+             <h3 style="text-align: center; font-family: sans-serif;">Usuário não realizou testes anteriores</h3>
              
              <% }%>
              
-             <h2><a href="login.jsp"> Sair</a></h2>
+             <h4 style="text-align: center; font-family: sans-serif;"><a href="home.jsp"> Sair</a></h4>
     </body>
 </html>

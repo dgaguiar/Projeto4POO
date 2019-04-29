@@ -60,14 +60,15 @@ public class BD {
     
      List <Double> ranking = new ArrayList<>();
      
-     /* public static List<Double> getRanking(){
+     public static List<Double> getRanking(){
          double aux = 0;
          for (int i = 0; i < notas.size() ; i++){
-             
-         }
-         
-        
-     }*/
+            for (int j = 0; j < notas.size(); i++){
+                return notas.get(j);
+            } 
+         }   
+         return notas.get(2);
+     }
      
      
 }

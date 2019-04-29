@@ -57,75 +57,17 @@ public class BD {
          
         return notas.get(nome);        
     }
-     
-     
-    /* private static ArrayList<Usuarios> Usuarios;
-    private static ArrayList<Question> TestesFeitos;
-    private static ArrayList<Usuarios> getPessoa() {
-        if (Usuarios == null) {
-            Usuarios = new ArrayList<>();
-        }
-        return Usuarios;
-    }
-    //cria um Array para teste feito
-    private static ArrayList<Question> getTestesFeitos(){
-        if (TestesFeitos == null){
-            TestesFeitos = new ArrayList<>();
-        }
-        return TestesFeitos;
-    }
-    //adiciona usuário , caso não esteja salvo
-    public static boolean addUsuario(Usuarios usuario){
-        for(Usuarios u: getPessoa()){
-            if(u.getUsuario().equals(usuario.getUsuario()))
-                return false;
-        }
-        BD.getPessoa().add(usuario);
-        return true;
-    }
     
-    public static boolean atualizarMediaUser(String nomeUsuario, double acertosQuiz){
-        int i = 0;
-        for(Usuarios u: getPessoa()){
-            if(u.getUsuario().equals(nomeUsuario)){
-                double mediaNota = 0;
-                if(u.getNotas(i)== 0){
-                    mediaNota = acertosQuiz;
-                }else{
-                    mediaNota = (u.getNotas(i) + acertosQuiz)/2;
-                }
-                u.setNotas(mediaNota);
-                BD.getPessoa().remove(i);
-                BD.getPessoa().add(i, u);
-                return true;
-            }
-            i++;
-        }
-        return false;
-    }
-    public static double obterMediaUsuario(String nomeUsuario){
-        for(Usuarios u : getPessoa()){
-            if(u.getUsuario().equals(nomeUsuario)){
-                return u. getNotas();
-            }
-        }
-        return -1;
-    }
-    public static boolean addTesteFeito(Question quiz){
-        BD.getTestesFeitos().add(quiz);
-        return true;
-    }
-    public static Usuarios getUsuario(int i){
-        return BD.getPessoa().get(i);
-    }
-    public static int totalUsuarios(){
-        return BD.getPessoa().size();
-    }
-    public static Question getTestefeito(int i){
-        return BD.getTestesFeitos().get(i);
-    }
-    public static int totalTestesFeitos(){
-        return BD.getTestesFeitos().size();
-    }
-    */
+     List <Double> ranking = new ArrayList<>();
+     
+     /* public static List<Double> getRanking(){
+         double aux = 0;
+         for (int i = 0; i < notas.size() ; i++){
+             
+         }
+         
+        
+     }*/
+     
+     
 }

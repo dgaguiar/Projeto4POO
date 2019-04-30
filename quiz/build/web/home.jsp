@@ -3,12 +3,22 @@
     Created on : 27/04/2019, 11:07:56
     Author     : thiag
 --%>
+<%@page import="newpackage.RankingComparator"%>
+<%@page import="java.text.DecimalFormat"%>
+<%@page import="java.util.Collections"%>
+<%@page import="newpackage.Torneio"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="newpackage.BD"%>
 <%@page import="newpackage.Usuarios"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%
+    DecimalFormat df = new DecimalFormat("#.##");
+    DecimalFormat df2 = new DecimalFormat("0.00");
+    double lastGrade = 100.0 * BD.getLastGrade();
+    double averageGrade = 100.0 * BD.getGradeAverage();
+%>
 
 
 <!DOCTYPE html>
@@ -53,7 +63,7 @@
         <hr/>
         <table>
             <tr><td><h3>Teste seus conhecimentos matemáticos !</h3> </td></tr> 
-            <tr><td><h4> Digite seu nome e efeture o teste!</h4> </td></tr>
+            <tr><td><h4> Digite seu nome e efetue o teste!</h4> </td></tr>
         </table> 
         
         <div id="logar">
@@ -65,7 +75,18 @@
         
         <table id="ranking" border="1">
             <tr><td>Usuário</td><td>Nota</td></tr>
-            <tr><td></td><td></td></tr>
+             
+                <%
+                    ArrayList<Torneio> ranking = Torneio.ranking;
+                    Collections.sort(ranking, new RankingComparator());
+                    for (Torneio score : ranking) {%>
+                    <tr>                    
+                    <td><%= score.getNome()%></td>
+                    <td><%= df2.format(score.getPontos())%></td>
+                    </tr>
+                <%}%>
+                       
+                
                 
             <tr>
         </table>        

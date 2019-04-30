@@ -4,6 +4,7 @@
     Author     : thiag
 --%>
 
+<%@page import="newpackage.Torneio"%>
 <%@page import="java.util.List"%>
 <%@page import="newpackage.BD"%>
 <%@page import="newpackage.Question"%>
@@ -30,8 +31,16 @@
     }
     nota = (double)respostaCorreta / (double)BD.getTestes().size();
     nota *=100;
- 
-   
+    
+    
+        BD.lastGrade = nota;
+        BD.testsGradeSum += nota;
+        BD.testsCount++;
+    
+    Torneio torneio = new Torneio ();
+    torneio.setNome(usuario);
+    torneio.setPontos((double)respostaCorreta);
+    Torneio.ranking.add(torneio);
 }
 
     BD.cadastraNotas(usuario, nota);
@@ -74,7 +83,7 @@
             
             <h3 style="text-align: center; font-family: sans-serif;">Quer fazer o teste novamente? Clique <a href="teste.jsp">aqui</a>.</h3>
              
-            <h3 style="text-align: center; font-family: sans-serif;"><a href="deslogar.jsp">SAIR</a></h3>
+            <h3 style="text-align: center; font-family: sans-serif;"><a href="home.jsp">SAIR</a></h3>
                 <%}%>
                 
     </body>

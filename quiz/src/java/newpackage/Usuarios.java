@@ -35,11 +35,6 @@ public class Usuarios {
     
     private static ArrayList<Usuarios>usuarios;
     
-    public static ArrayList<Usuarios>getUsuarios(){
-    usuarios = new ArrayList();
-    Usuarios usuario = new Usuarios();
-    usuarios.add(usuario);
-    return usuarios;
-            }
+    
     
 }

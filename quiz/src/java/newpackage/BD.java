@@ -15,6 +15,10 @@ import java.util.List;
  */
 public class BD {
    
+    public static int testsCount = 0;
+    public static double testsGradeSum = 0.0;
+    public static double lastGrade = 0.0;
+    
    private static HashMap<String,List<Double>> notas = new HashMap<>();
    
     public static ArrayList<Question> getTestes(){ 
@@ -57,18 +61,16 @@ public class BD {
          
         return notas.get(nome);        
     }
+     
+      public static double getLastGrade(){
+        return BD.lastGrade;
+    }
     
-     List <Double> ranking = new ArrayList<>();        
+    public static double getGradeAverage(){
+        return BD.testsGradeSum / (double)BD.testsCount;
+    }
      
-     public static List<Double> getRanking(){
-         double aux = 0;
-         for (int i = 0; i < notas.size() ; i++){
-            for (int j = 0; j < notas.size(); i++){
-                return notas.get(j);
-}
-         }   
-         return notas.get(2);
-     }
-     
+    
+    
      
 }
